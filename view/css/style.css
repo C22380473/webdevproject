@@ -75,7 +75,7 @@ button {
 
 /* line 39, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/theme-default.scss */
 h1, h2, h3, h4, h5 {
-  font-family: "Satisfy", cursive;
+  font-family: "Satisfy", ;
   color: #000000;
 }
 
@@ -994,6 +994,7 @@ h3 {
   display: inline-block;
   text-align: center;
   line-height: 50px;
+  font-size: 20px;
 }
 
 /* line 51, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_header.scss */
@@ -1456,16 +1457,56 @@ h3 {
 @media (max-width: 767px) {
   /* line 13, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_slider.scss */
   .slider_area .single_slider {
-    height: 500px;
+    height: 400px;
   }
+
+
+/* Adjust the heading size on small screens */
+.slider_area .single_slider .slider_text h3 {
+  font-size: 30px;
+  line-height: 35px;
+}
+
+/* Make the search bar full width on small screens */
+.slider_area .single_slider{
+  width: 100%; /* Search bar takes full width */
+  margin-top: 20px; /* Add some space between the heading and search bar */
+}
+
+.input-group {
+  width: 100%; /* Search bar takes full width */
+  margin-top: 20px; /* Add some space between the heading and search bar */
+}
+/* Adjust the search input style for small screens */
+.slider_area .single_slider .input-group .form-control {
+  font-size: 16px; /* Smaller font size for better fit */
+  ;
+}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 13, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_slider.scss */
   .slider_area .single_slider {
-    height: 620px;
+    height: 500px;
+  }
+
+   /* Adjust the heading size for tablets */
+   .slider_area .single_slider .slider_text h3 {
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  /* Make the search bar a bit smaller on tablets */
+  .slider_area .single_slider .input-group {
+    width: 80%; /* 80% width for medium screens */
+    margin-top: 20px;
+  }
+
+  .slider_area .single_slider .input-group .form-control {
+    font-size: 18px;
   }
 }
+
 
 /* line 31, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_slider.scss */
 .slider_area .single_slider .ilstrator_thumb {
@@ -1508,13 +1549,29 @@ h3 {
   /* line 43, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_slider.scss */
   .slider_area .single_slider .phone_thumb img {
     width: 100%;
+    height: 600px; /* Full-height for larger screens */
+  }
+  /* Keep the heading size larger for desktop */
+  .slider_area .single_slider .slider_text h3 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  /* Keep the search bar centered and large on desktop */
+  .slider_area .single_slider .input-group {
+    width: 60%; /* 60% width for larger screens */
+    margin-top: 40px;
+  }
+
+  .slider_area .single_slider .input-group .form-control {
+    font-size: 20px;
   }
 }
 
 /* line 56, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_slider.scss */
 .slider_area .single_slider .slider_text h3 {
   color: #fff;
-  font-family: "Satisfy", cursive;
+  font-family: "Satisfy", ;
   font-size: 100px;
   text-transform: capitalize;
 }
@@ -2343,7 +2400,7 @@ h3 {
 /* line 103, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_gallery.scss */
 .portfolio_details_area .portfolio_details_content p {
   font-size: 16px;
-  font-family: "Satisfy", cursive;
+  font-family: "Satisfy", ;
   color: #727272;
   line-height: 28px;
 }
@@ -2865,7 +2922,7 @@ h3 {
   cursor: pointer;
   display: block;
   float: left;
-  font-family: "Satisfy", cursive;
+  font-family: "Satisfy", ;
   font-weight: normal;
   width: 100% !important;
   /* height: 42px; */
@@ -3729,7 +3786,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_download.scss */
 .download_app_area {
-  padding-top: 100px;
+  padding-top: 0px;
   padding-bottom: 320px;
 }
 
@@ -4193,6 +4250,7 @@ h3 {
 
 /* line 18, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_recepie.scss */
 .recepie_area.plus_padding {
+
   padding-bottom: 150px;
 }
 
@@ -5195,6 +5253,25 @@ h3 {
   }
 }
 
+.contact-section .btn_4 {
+  background-color: #ffffff;
+  padding: 12px 40px; /* Adjust padding for better responsiveness */
+  border-radius: 50px;
+  margin-top: 10px;
+}
+
+.contact-section .btn_4:hover {
+  background-color: #ff5e13;
+}
+
+@media (max-width: 576px) {
+  /* Make buttons full-width on small screens */
+  .contact-section .btn_4 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
 /* line 141, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_contact.scss */
 .contact-section .btn_2 {
   background-color: #191d34;
@@ -5219,6 +5296,8 @@ h3 {
   margin-bottom: 30px;
   font-size: 24px;
 }
+
+
 
 /* line 85, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_elements.scss */
 b,
@@ -5276,7 +5355,7 @@ h6 {
 .typography h4,
 .typography h5,
 .typography h6 {
-  color: #828bb2;
+  color: #ffc000;
 }
 
 /* line 137, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_elements.scss */
