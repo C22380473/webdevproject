@@ -1,26 +1,77 @@
-/*!------------------------------------------------------------------
-[MAIN STYLESHEET]
 
-PROJECT:	Project Name
-VERSION:	Versoin Number
--------------------------------------------------------------------*/
+@import 'varriable.scss';
+@import 'mixins.scss';
+@import 'extend';
+@import 'responsive.scss';
+@import 'theme-default.scss';
+@import 'btn';
+@import 'section_title';
+@import 'slick-nav.scss';
 
-/*------------------------------------------------------------------
-[TABLE OF CONTENTS]
--------------------------------------------------------------------*/
 
-@import 'variables';
 
-@import 'mixins';
+// header
+@import 'header';
 
-@import 'typography';
+// slider
+@import 'slider';
 
-@import 'buttons';
+// about
+@import 'features';
 
-@import 'common';
+// counter
+@import 'counter';
+// counter
+@import 'about';
+// counter
+@import 'recipe_details.scss';
 
-@import 'templates/navigation';
+// counter
+@import 'case_details';
 
-@import 'templates/homepage';
+// gallery
+@import '_gallery';
 
-@import 'templates/blog';
+// about
+@import 'footer';
+
+@import 'bradcam';
+
+@import 'department';
+
+@import 'tesmonial';
+
+@import 'discuss';
+
+@import 'service';
+
+@import 'video';
+
+@import 'portfolio';
+
+@import 'download';
+
+@import 'accordion_area';
+@import 'recepie';
+
+@import 'case_study.scss';
+
+
+
+
+
+// other pages default
+
+// contact
+@import 'contact';
+
+// elements
+@import 'elements.scss';
+
+// blog
+@import 'blog';
+
+
+// blog part
+@import 'blog_part';
+
