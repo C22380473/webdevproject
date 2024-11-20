@@ -32,51 +32,43 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-   <!-- header-start -->
-   <header>
-    <div class="header-area">
-      <div id="sticky-header" class="main-header-area">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-xl-3 col-lg-2">
-              <div class="typography">
-                      <a href="#"><h3>FindMyRecipe</h3></a>
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-7">
-              <div class="main-menu white_text d-none d-lg-block">
-                <nav>
-                  <ul id="navigation">
-                      <li><a href="index.html">Find Recipes</a></li>
-
-                       <!-- Show My Recipes link only if logged in -->
-                      <li><a href="myrecipes.html"  class="logged-in">My Recipes</a></li>
-
-                       <!-- Show Login/Sign Up or Logout depending on user status -->
-                       <li><a href="login.html" id="login-link" class="not-logged-in">Login/Sign Up</a></li>
-                       <li><a href="profile.html" id="logout-link" class="logged-in">Edit Profile</a></li>
-                       <li><a href="index.html" id="logout-link" class="logged-in">Logout</a></li>
-                    </ul>
-                </nav>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-              <div class="search_icon">
-                  <input type="text" id="search-bar" placeholder="Search recipes...">
-                <a href="#">
-                  <i class="ti-search"></i>
-                </a>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="mobile_menu d-block d-lg-none"></div>
-            </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-3">
+          <div class="typography">
+            <a class="navbar-brand" style="font-size: x-large;" href="#">FindMyRecipe</a>
           </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- header-end -->
+    
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto" style="font-size: large;">
+              <!-- Find Recipes Link -->
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Find Recipes</a>
+              </li>
+              
+              <!-- My Recipes Link (only visible if logged in) -->
+              <li class="nav-item" id="my-recipes-link" style="display: none;">
+                <a class="nav-link" href="myrecipes.html">My Recipes</a>
+              </li>
+              
+              <!-- Login/Sign Up Link (only visible if NOT logged in) -->
+              <li class="nav-item" id="login-link">
+                <a class="nav-link" href="login.html">Login/Sign Up</a>
+              </li>
+        
+              <!-- Edit Profile Link (only visible if logged in) -->
+              <li class="nav-item" id="profile-link" style="display: none;">
+                <a class="nav-link" href="profile.html">Edit Profile</a>
+              </li>
+        
+              <!-- Logout Link (only visible if logged in) -->
+              <li class="nav-item" id="logout-link" style="display: none;">
+                <a class="nav-link" href="#" id="logout-link">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
     <!-- bradcam_area  -->
     <div class="bradcam_area breadcam_bg_4">
