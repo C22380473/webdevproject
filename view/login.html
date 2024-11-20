@@ -32,45 +32,43 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
- <!-- header-start -->
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-3">
-  <div class="typography">
-    <a class="navbar-brand" style="font-size: x-large;" href="#">FindMyRecipe</a>
-  </div>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto" style="font-size: large;">
-      <!-- Find Recipes Link -->
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Find Recipes</a>
-      </li>
-      
-      <!-- My Recipes Link (only visible if logged in) -->
-      <li class="nav-item" id="my-recipes-link" style="display: none;">
-        <a class="nav-link" href="myrecipes.html">My Recipes</a>
-      </li>
-      
-      <!-- Login/Sign Up Link (only visible if NOT logged in) -->
-      <li class="nav-item active" id="login-link">
-        <a class="nav-link" href="login.html">Login/Sign Up<span class="sr-only">(current)</span></a>
-      </li>
-
-      <!-- Edit Profile Link (only visible if logged in) -->
-      <li class="nav-item" id="profile-link" style="display: none;">
-        <a class="nav-link" href="profile.html">Edit Profile</a>
-      </li>
-
-      <!-- Logout Link (only visible if logged in) -->
-      <li class="nav-item" id="logout-link" style="display: none;">
-        <a class="nav-link" href="#" id="logout-link">Logout</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-    <!-- header-end -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-3">
+          <div class="typography">
+            <a class="navbar-brand" style="font-size: x-large;" href="#">FindMyRecipe</a>
+          </div>
+    
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto" style="font-size: large;">
+              <!-- Find Recipes Link -->
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Find Recipes</a>
+              </li>
+              
+              <!-- My Recipes Link (only visible if logged in) -->
+              <li class="nav-item" id="my-recipes-link" style="display: none;">
+                <a class="nav-link" href="myrecipes.html">My Recipes</a>
+              </li>
+              
+              <!-- Login/Sign Up Link (only visible if NOT logged in) -->
+              <li class="nav-item active" id="login-link">
+                <a class="nav-link" href="login.html">Login/Sign Up<span class="sr-only">(current)</span></a>
+              </li>
+        
+              <!-- Edit Profile Link (only visible if logged in) -->
+              <li class="nav-item" id="profile-link" style="display: none;">
+                <a class="nav-link" href="profile.html">Edit Profile</a>
+              </li>
+        
+              <!-- Logout Link (only visible if logged in) -->
+              <li class="nav-item" id="logout-link" style="display: none;">
+                <a class="nav-link" href="#" id="logout-link">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
     <!-- bradcam_area  -->
     <div class="bradcam_area bradcam_bg_1">
@@ -85,44 +83,62 @@
         </div>
     </div>
     <!-- /bradcam_area  -->
-  <!-- ================ contact section start ================= -->
+<!-- ================ Login/Signup Section Start ================= -->
 <section class="contact-section section_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2 class="contact-title">Log In/Sign Up</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-12">
+        <div class="text-center mb-4">
+          <h2 class="contact-title">Log In</h2>
         </div>
-        <div class="col-lg-8 mx-auto">
-          <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-            <div class="row">
-              <div class="col-12">
-                <div class="form-group">
-                  <input class="form-control" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your username'" placeholder='Enter Username'>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-group">
-                  <input class="form-control" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder='Enter Email Address'>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-group">
-                  <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Password'" placeholder='Enter Password'>
-                </div>
+        <!-- Login Form -->
+        <form class="form-contact contact_form" id="loginForm" method="post">
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <input class="form-control" name="username" id="login-username" type="text" placeholder="Enter Username" required>
               </div>
             </div>
-            <div class="form-group mt-3 text-center">
-              <button type="submit" class="button button-contactForm btn_4 boxed-btn">Log In</button>      
-              <button type="submit" class="button button-contactForm btn_4 boxed-btn">Sign Up</button>  
+            <div class="col-12">
+              <div class="form-group">
+                <input class="form-control" name="password" id="login-password" type="password" placeholder="Enter Password" required>
+              </div>
             </div>
-          </form>
+          </div>
+          <div class="form-group mt-3 text-center">
+            <button type="submit" class="button button-contactForm btn_4 boxed-btn">Log In</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-lg-6 col-12">
+        <div class="text-center mb-4">
+          <h2 class="contact-title">Sign Up</h2>
         </div>
+        <!-- Signup Form -->
+        <form class="form-contact contact_form" id="signupForm" method="post">
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <input class="form-control" name="username" id="signup-username" type="text" placeholder="Enter Username" required>
+              </div>
+            </div>
+            
+            <div class="col-12">
+              <div class="form-group">
+                <input class="form-control" name="password" id="signup-password" type="password" placeholder="Enter Password" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-group mt-3 text-center">
+            <button type="submit" class="button button-contactForm btn_4 boxed-btn">Sign Up</button>
+          </div>
+        </form>
       </div>
     </div>
-  </section>
-  <!-- ================ contact section end ================= -->
-  
-
+  </div>
+</section>
+<!-- ================ Login/Signup Section End ================= -->
    <!-- footer  -->
    <footer class="footer">
     <div class="footer_top">
@@ -263,6 +279,41 @@
   <script src="js/mail-script.js"></script>
 
   <script src="js/main.js"></script>
+  <script>
+
+   // Submit login
+   document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const username = document.getElementById('login-username').value;
+    const password = document.getElementById('login-password').value;
+
+    const response = await fetch('/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password }),
+    });
+
+    const result = await response.json();
+    alert(result.msg);
+    window.location.href = '/index.html';  // You can change this to the appropriate page
+  });
+
+  // Submit signup
+  document.getElementById('signupForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const username = document.getElementById('signup-username').value;
+    const password = document.getElementById('signup-password').value;
+
+    const response = await fetch('/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password }),
+    });
+
+    const result = await response.json();
+    alert(result.msg);
+  });
+  </script>
 </body>
 
 </html>

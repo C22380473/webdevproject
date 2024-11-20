@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 7e3ea8a32fe9c8001c7c98b4f9f8d747378cc8bb
 
 const mongoose = require('mongoose');
 
