@@ -1,4 +1,17 @@
-var mysql = require('mysql2');
+db.js:
+
+const mongoose = require('mongoose');
+
+// Connect to MongoDB
+mongoose.connect('mongodb://localhost:27017/recipeApp', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.error('Error connecting to MongoDB:', err));
+
+module.exports = mongoose; // Export mongoose for use in other files
+/*var mysql = require('mysql2');
 
 	var con = mysql.createConnection({
 	  host: "localhost",
@@ -14,3 +27,4 @@ var mysql = require('mysql2');
 	});
 
 	module.exports = con;
+*/
