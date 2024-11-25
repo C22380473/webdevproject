@@ -84,9 +84,8 @@
     </div>
     <!-- /bradcam_area  -->
   <!-- ================ User Profile Section Start ================= -->
-<section class="contact-section section_padding">
+  <section class="contact-section section_padding">
     <div class="container">
-  
       <!-- Edit Profile Section -->
       <div class="row">
         <div class="col-12 text-center">
@@ -94,26 +93,59 @@
         </div>
   
         <div class="col-lg-8 mx-auto">
-          <form class="form-contact contact_form" action="/update-profile" method="post" id="profileForm" novalidate="novalidate">
-            <div class="row">
-              <div class="col-12">
-                <div class="form-group">
-                  <label for="name">Username:</label>
-                  <input class="form-control" name="name" id="name" type="text" placeholder="Enter your username" value="JohnDoe">
-                </div>
-              </div>
-        
-              <div class="col-12">
-                <div class="form-group">
-                  <label for="password">Change Password:</label>
-                  <input class="form-control" name="password" id="password" type="password" placeholder="Enter new password">
-                </div>
-              </div>
-            </div>
+          <!-- Username Edit Section -->
+          <div class="form-group">
+            <label for="name">Username:</label>
+            <input 
+              class="form-control" 
+              name="name" 
+              id="name" 
+              type="text" 
+              placeholder="Enter your username" 
+              readonly 
+            >
+            <button 
+              type="button" 
+              id="edit-username-btn" 
+              class="button btn_4 boxed-btn mt-3"
+            >
+              Edit
+            </button>
+            <button 
+              type="button" 
+              id="save-username-btn" 
+              class="button btn_4 boxed-btn mt-3 d-none"
+            >
+              Save
+            </button>
+          </div>
   
+          <!-- Password Update Section -->
+          <form id="profileForm">
+            <div class="form-group">
+              <label for="password">Change Password:</label>
+              <input 
+                class="form-control" 
+                name="password" 
+                id="password" 
+                type="password" 
+                placeholder="Enter new password"
+              >
+            </div>
             <div class="form-group mt-3 text-center">
-              <button type="submit" class="button button-contactForm btn_4 boxed-btn">Save Changes</button>
-              <button type="button" class="button button-contactForm btn_4 boxed-btn" onclick="deleteAccount()">Delete Account</button>
+              <button 
+                type="submit" 
+                class="button button-contactForm btn_4 boxed-btn"
+              >
+                Save Changes
+              </button>
+              <button 
+                type="button" 
+                class="button button-contactForm btn_4 boxed-btn" 
+                onclick="deleteAccount()"
+              >
+                Delete Account
+              </button>
             </div>
           </form>
         </div>
@@ -265,7 +297,7 @@
   <script src="js/main.js"></script>
   <script>
  // Fetch user data and populate the username field
- async function populateProfile() {
+  async function populateProfile() {
     try {
       const response = await fetch('/profile', { method: 'GET' });
       if (response.ok) {
@@ -279,8 +311,43 @@
     }
   }
 
-  // Call the function when the page loads
-  window.onload = populateProfile;
+  // Enable editing the username
+  document.getElementById('edit-username-btn').addEventListener('click', () => {
+    const usernameInput = document.getElementById('name');
+    usernameInput.removeAttribute('readonly'); // Enable editing
+    document.getElementById('edit-username-btn').classList.add('d-none'); // Hide Edit button
+    document.getElementById('save-username-btn').classList.remove('d-none'); // Show Save button
+  });
+
+  // Save the new username
+  document.getElementById('save-username-btn').addEventListener('click', async () => {
+    const newUsername = document.getElementById('name').value;
+
+    if (!newUsername) {
+      alert('Username cannot be empty!');
+      return;
+    }
+
+    try {
+      const response = await fetch('/update-username', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: newUsername }),
+      });
+
+      const result = await response.json();
+      alert(result.msg); // Display success or error message
+
+      if (response.ok) {
+        document.getElementById('name').setAttribute('readonly', true); // Disable editing
+        document.getElementById('edit-username-btn').classList.remove('d-none'); // Show Edit button
+        document.getElementById('save-username-btn').classList.add('d-none'); // Hide Save button
+      }
+    } catch (err) {
+      console.error('Error updating username:', err);
+      alert('Failed to update username.');
+    }
+  });
 
   // Submit the form to update the user's password
   document.getElementById('profileForm').addEventListener('submit', async (e) => {
@@ -326,8 +393,8 @@
     }
   }
 
-
-
+  // Call the function when the page loads
+  window.onload = populateProfile;
 
   </script>
 </body>

@@ -169,6 +169,27 @@ app.post('/update-profile', isAuthenticated, async (req, res) => {
       res.status(500).json({ msg: 'An error occurred while updating the profile.' });
     }
   });
+
+// Route to update the username
+app.post('/update-username', isAuthenticated, async (req, res) => {
+  const { username } = req.body;
+
+  try {
+    // Check if the new username already exists
+    const existingUser = await User.findOne({ username });
+    if (existingUser) {
+      return res.status(400).json({ msg: 'Username already taken!' });
+    }
+
+    // Update the username for the logged-in user
+    await User.findByIdAndUpdate(req.session.userId, { username });
+
+    res.json({ msg: 'Username updated successfully!' });
+  } catch (err) {
+    console.error('Error updating username:', err);
+    res.status(500).json({ msg: 'An error occurred while updating the username.' });
+  }
+});
   
 
 // Route to delete the user account
