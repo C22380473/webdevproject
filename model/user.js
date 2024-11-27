@@ -19,5 +19,5 @@ userSchema.pre('save', function(next) {
   
   const User = mongoose.model('User', userSchema); // Create the model
   
-  module.exports = User; // Export it to use in your server
+  module.exports = User; 
   
