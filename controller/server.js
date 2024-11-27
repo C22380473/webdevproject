@@ -17,7 +17,22 @@ http.createServer(app).listen(8080, () => {
 
 // Route to fetch all recipes from the MongoDB database
 app.get("/recipes", (req, res) => {
-  Recipe.find() // Fetch all recipes from the database
+  Recipe.find(); // Fetch all recipes from the database
+
+  const { category, search } = req.query;
+  const filter = {};
+
+  // Apply category filter if provided
+  if (category) {
+    filter.category = category;
+  }
+
+  // Apply search filter if provided
+  if (search) {
+    filter.title = { $regex: search, $options: "i" }; // Case-insensitive search
+  }
+
+  Recipe.find(filter)
     .then((recipes) => {
       res.json(recipes); // Send the recipes as JSON (or render if you're using a template engine)
     })
