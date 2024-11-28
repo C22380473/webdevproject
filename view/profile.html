@@ -1,335 +1,429 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="zxx">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Tasty Recipes</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/gijgo.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slicknav.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/nice-select.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/gijgo.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/slicknav.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-</head>
+  </head>
 
-<body>
+  <body>
     <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-3">
-          <div class="typography">
-            <a class="navbar-brand" style="font-size: x-large;" href="#">FindMyRecipe</a>
-          </div>
-    
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto" style="font-size: large;">
-              <!-- Find Recipes Link -->
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Find Recipes</a>
-              </li>
-              
-              <!-- My Recipes Link (only visible if logged in) -->
-              <li class="nav-item" id="my-recipes-link" style="display: none;">
-                <a class="nav-link" href="myrecipes.html">My Recipes</a>
-              </li>
-              
-              <!-- Login/Sign Up Link (only visible if NOT logged in) -->
-              <li class="nav-item" id="login-link">
-                <a class="nav-link" href="login.html">Login/Sign Up</a>
-              </li>
-        
-              <!-- Edit Profile Link (only visible if logged in) -->
-              <li class="nav-item active" id="profile-link" style="display: none;">
-                <a class="nav-link" href="profile.html">Edit Profile<span class="sr-only">(current)</span></a>
-              </li>
-        
-              <!-- Logout Link (only visible if logged in) -->
-              <li class="nav-item" id="logout-link" style="display: none;">
-                <a class="nav-link" href="#" id="logout-link">Logout</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-3">
+      <div class="typography">
+        <a class="navbar-brand" style="font-size: x-large" href="#"
+          >FindMyRecipe</a
+        >
+      </div>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto" style="font-size: large">
+          <!-- Find Recipes Link -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Find Recipes</a>
+          </li>
+
+          <!-- My Recipes Link (only visible if logged in) -->
+          <li class="nav-item" id="my-recipes-link" style="display: none">
+            <a class="nav-link" href="myrecipes.html">My Recipes</a>
+          </li>
+
+          <!-- Login/Sign Up Link (only visible if NOT logged in) -->
+          <li class="nav-item" id="login-link">
+            <a class="nav-link" href="login.html">Login/Sign Up</a>
+          </li>
+
+          <!-- Edit Profile Link (only visible if logged in) -->
+          <li class="nav-item active" id="profile-link" style="display: none">
+            <a class="nav-link" href="profile.html"
+              >Edit Profile<span class="sr-only">(current)</span></a
+            >
+          </li>
+
+          <!-- Logout Link (only visible if logged in) -->
+          <li class="nav-item" id="logout-link" style="display: none">
+            <a class="nav-link" href="#" id="logout-link">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <!-- bradcam_area  -->
     <div class="bradcam_area breadcam_bg_3">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="bradcam_text text-center">
-                        <h3>Edit Profile</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /bradcam_area  -->
-  <!-- ================ User Profile Section Start ================= -->
-<section class="contact-section section_padding">
-    <div class="container">
-  
-      <!-- Edit Profile Section -->
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2 class="profile-title">Edit Profile</h2>
-        </div>
-  
-        <div class="col-lg-8 mx-auto">
-          <form class="form-contact contact_form" action="/update-profile" method="post" id="profileForm" novalidate="novalidate">
-            <div class="row">
-              <div class="col-12">
-                <div class="form-group">
-                  <label for="name">Username:</label>
-                  <input class="form-control" name="name" id="name" type="text" placeholder="Enter your username" value="JohnDoe">
-                </div>
-              </div>
-        
-              <div class="col-12">
-                <div class="form-group">
-                  <label for="password">Change Password:</label>
-                  <input class="form-control" name="password" id="password" type="password" placeholder="Enter new password">
-                </div>
-              </div>
-            </div>
-  
-            <div class="form-group mt-3 text-center">
-              <button type="submit" class="button button-contactForm btn_4 boxed-btn">Save Changes</button>
-              <button type="button" class="button button-contactForm btn_4 boxed-btn" onclick="deleteAccount()">Delete Account</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ================ User Profile Section End ================= -->
-  
-
-   <!-- footer  -->
-   <footer class="footer">
-    <div class="footer_top">
       <div class="container">
         <div class="row">
-          <div class="col-xl-2 col-md-6 col-lg-2">
-            <div class="footer_widget">
-              <h3 class="footer_title">Explore Recipes</h3>
-              <ul>
-                <li><a href="#">Popular Recipes</a></li>
-                <li><a href="#"> Newest Additions</a></li>
-                <li><a href="#">Trending Dishes</a></li>
-                <li><a href="#">Seasonal Favorites</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-2 col-md-6 col-lg-2">
-            <div class="footer_widget">
-              <h3 class="footer_title">Categories</h3>
-              <ul>
-                <li><a href="#">Breakfast Recipes</a></li>
-                <li><a href="#">Quick & Easy</a></li>
-                <li><a href="#">Healthy Choices</a></li>
-                <li><a href="#">Desserts</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-2 col-md-6 col-lg-2">
-            <div class="footer_widget">
-              <h3 class="footer_title">Quick Links</h3>
-              <ul>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-2 col-md-6 col-lg-2">
-            <div class="footer_widget">
-              <h3 class="footer_title">Support</h3>
-              <ul>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Account Settings</a></li>
-                <li><a href="#">Report an Issue</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-4 col-md-6 col-lg-4">
-            <div class="footer_widget">
-              <h3 class="footer_title">Subscribe</h3>
-              <p class="newsletter_text">
-                Subscribe to our newsletter for weekly recipes.
-              </p>
-              <form action="#" class="newsletter_form">
-                <input type="text" placeholder="Enter your mail" />
-                <button type="submit"><i class="ti-arrow-right"></i></button>
-              </form>
+          <div class="col-xl-12">
+            <div class="bradcam_text text-center">
+              <h3>Edit Profile</h3>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="copy-right_text">
+    <!-- /bradcam_area  -->
+    <!-- ================ User Profile Section Start ================= -->
+    <section class="contact-section section_padding">
       <div class="container">
-        <div class="footer_border"></div>
-        <div class="row align-items-center">
-          <div class="col-xl-8 col-md-8">
-            <p class="copy_right">
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              All rights reserved | This template is made with
-              <i class="fa fa-heart-o" aria-hidden="true"></i> by
-              <a href="https://colorlib.com" target="_blank">Colorlib</a>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
+        <!-- Edit Profile Section -->
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2 class="profile-title">Edit Profile</h2>
           </div>
-          <div class="col-xl-4 col-md-4">
-            <div class="socail_links">
-              <ul>
-                <li>
-                  <a href="#">
-                    <i class="ti-facebook"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="ti-twitter-alt"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-dribbble"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-behance"></i>
-                  </a>
-                </li>
-              </ul>
+
+          <div class="col-lg-8 mx-auto">
+            <!-- Username Edit Section -->
+            <div class="form-group">
+              <label for="name">Username:</label>
+              <input
+                class="form-control"
+                name="name"
+                id="name"
+                type="text"
+                placeholder="Enter your username"
+                readonly
+              />
+              <button
+                type="button"
+                id="edit-username-btn"
+                class="button btn_4 boxed-btn mt-3"
+              >
+                Edit
+              </button>
+              <button
+                type="button"
+                id="save-username-btn"
+                class="button btn_4 boxed-btn mt-3 d-none"
+              >
+                Save
+              </button>
+            </div>
+
+            <!-- Password Update Section -->
+            <form id="profileForm">
+              <div class="form-group">
+                <label for="password">Change Password:</label>
+                <input
+                  class="form-control"
+                  name="password"
+                  id="password"
+                  type="password"
+                  placeholder="Enter new password"
+                />
+              </div>
+              <div class="form-group mt-3 text-center">
+                <button
+                  type="submit"
+                  class="button button-contactForm btn_4 boxed-btn"
+                >
+                  Save Changes
+                </button>
+                <button
+                  type="button"
+                  class="button button-contactForm btn_4 boxed-btn"
+                  onclick="deleteAccount()"
+                >
+                  Delete Account
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================ User Profile Section End ================= -->
+
+    <!-- footer  -->
+    <footer class="footer">
+      <div class="footer_top">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-2 col-md-6 col-lg-2">
+              <div class="footer_widget">
+                <h3 class="footer_title">Explore Recipes</h3>
+                <ul>
+                  <li><a href="#">Popular Recipes</a></li>
+                  <li><a href="#"> Newest Additions</a></li>
+                  <li><a href="#">Trending Dishes</a></li>
+                  <li><a href="#">Seasonal Favorites</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-2 col-md-6 col-lg-2">
+              <div class="footer_widget">
+                <h3 class="footer_title">Categories</h3>
+                <ul>
+                  <li><a href="#">Breakfast Recipes</a></li>
+                  <li><a href="#">Quick & Easy</a></li>
+                  <li><a href="#">Healthy Choices</a></li>
+                  <li><a href="#">Desserts</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-2 col-md-6 col-lg-2">
+              <div class="footer_widget">
+                <h3 class="footer_title">Quick Links</h3>
+                <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-2 col-md-6 col-lg-2">
+              <div class="footer_widget">
+                <h3 class="footer_title">Support</h3>
+                <ul>
+                  <li><a href="#">Help Center</a></li>
+                  <li><a href="#">Account Settings</a></li>
+                  <li><a href="#">Report an Issue</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6 col-lg-4">
+              <div class="footer_widget">
+                <h3 class="footer_title">Subscribe</h3>
+                <p class="newsletter_text">
+                  Subscribe to our newsletter for weekly recipes.
+                </p>
+                <form action="#" class="newsletter_form">
+                  <input type="text" placeholder="Enter your mail" />
+                  <button type="submit"><i class="ti-arrow-right"></i></button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-  <!--/ footer  -->
+      <div class="copy-right_text">
+        <div class="container">
+          <div class="footer_border"></div>
+          <div class="row align-items-center">
+            <div class="col-xl-8 col-md-8">
+              <p class="copy_right">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                All rights reserved | This template is made with
+                <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </p>
+            </div>
+            <div class="col-xl-4 col-md-4">
+              <div class="socail_links">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="ti-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="ti-twitter-alt"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-dribbble"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-behance"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--/ footer  -->
 
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
 
-  <!-- JS here -->
-  <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-  <script src="js/vendor/jquery-1.12.4.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
-  <script src="js/ajax-form.js"></script>
-  <script src="js/waypoints.min.js"></script>
-  <script src="js/jquery.counterup.min.js"></script>
-  <script src="js/imagesloaded.pkgd.min.js"></script>
-  <script src="js/scrollIt.js"></script>
-  <script src="js/jquery.scrollUp.min.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script src="js/nice-select.min.js"></script>
-  <script src="js/jquery.slicknav.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/gijgo.min.js"></script>
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
 
-  <!--contact js-->
-  <script src="js/contact.js"></script>
-  <script src="js/jquery.ajaxchimp.min.js"></script>
-  <script src="js/jquery.form.js"></script>
-  <script src="js/jquery.validate.min.js"></script>
-  <script src="js/mail-script.js"></script>
-
-  <script src="js/main.js"></script>
-  <script>
- // Fetch user data and populate the username field
- async function populateProfile() {
-    try {
-      const response = await fetch('/profile', { method: 'GET' });
-      if (response.ok) {
-        const user = await response.json();
-        document.getElementById('name').value = user.username; // Set the username in the field
-      } else {
-        alert('Failed to fetch user profile.');
-      }
-    } catch (err) {
-      console.error('Error fetching profile:', err);
-    }
-  }
-
-  // Call the function when the page loads
-  window.onload = populateProfile;
-
-  // Submit the form to update the user's password
-  document.getElementById('profileForm').addEventListener('submit', async (e) => {
-    e.preventDefault(); // Prevent the default form submission
-    const password = document.getElementById('password').value;
-
-    if (!password) {
-      alert('Please enter a new password.');
-      return;
-    }
-
-    try {
-      const response = await fetch('/update-profile', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ password }),
-      });
-
-      const result = await response.json();
-      alert(result.msg); // Show success or error message
-    } catch (err) {
-      console.error('Error updating profile:', err);
-      alert('Failed to update profile.');
-    }
-  });
-
-  // Function to delete the user's account
-  async function deleteAccount() {
-    if (confirm('Are you sure you want to delete your account? This action cannot be undone.')) {
-      try {
-        const response = await fetch('/delete-account', { method: 'POST' });
-
-        const result = await response.json();
-        alert(result.msg);
-
-        if (response.ok) {
-          window.location.href = '/login.html'; // Redirect to login after account deletion
+    <script src="js/main.js"></script>
+    <script>
+      // Fetch user data and populate the username field
+      async function populateProfile() {
+        try {
+          const response = await fetch("/profile", { method: "GET" });
+          if (response.ok) {
+            const user = await response.json();
+            document.getElementById("name").value = user.username; // Set the username in the field
+          } else {
+            alert("Failed to fetch user profile.");
+          }
+        } catch (err) {
+          console.error("Error fetching profile:", err);
         }
-      } catch (err) {
-        console.error('Error deleting account:', err);
-        alert('Failed to delete account.');
       }
-    }
-  }
 
+      // Enable editing the username
+      document
+        .getElementById("edit-username-btn")
+        .addEventListener("click", () => {
+          const usernameInput = document.getElementById("name");
+          usernameInput.removeAttribute("readonly"); // Enable editing
+          document.getElementById("edit-username-btn").classList.add("d-none"); // Hide Edit button
+          document
+            .getElementById("save-username-btn")
+            .classList.remove("d-none"); // Show Save button
+        });
 
+      // Save the new username
+      document
+        .getElementById("save-username-btn")
+        .addEventListener("click", async () => {
+          const newUsername = document.getElementById("name").value;
 
+          if (!newUsername) {
+            alert("Username cannot be empty!");
+            return;
+          }
 
-  </script>
-</body>
+          try {
+            const response = await fetch("/update-username", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ username: newUsername }),
+            });
 
+            const result = await response.json();
+            alert(result.msg); // Display success or error message
+
+            if (response.ok) {
+              document.getElementById("name").setAttribute("readonly", true); // Disable editing
+              document
+                .getElementById("edit-username-btn")
+                .classList.remove("d-none"); // Show Edit button
+              document
+                .getElementById("save-username-btn")
+                .classList.add("d-none"); // Hide Save button
+            }
+          } catch (err) {
+            console.error("Error updating username:", err);
+            alert("Failed to update username.");
+          }
+        });
+
+      // Submit the form to update the user's password
+      document
+        .getElementById("profileForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault(); // Prevent the default form submission
+          const password = document.getElementById("password").value;
+
+          if (!password) {
+            alert("Please enter a new password.");
+            return;
+          }
+
+          try {
+            const response = await fetch("/update-profile", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ password }),
+            });
+
+            const result = await response.json();
+            alert(result.msg); // Show success or error message
+          } catch (err) {
+            console.error("Error updating profile:", err);
+            alert("Failed to update profile.");
+          }
+        });
+
+      // Function to delete the user's account
+      async function deleteAccount() {
+        if (
+          confirm(
+            "Are you sure you want to delete your account? This action cannot be undone."
+          )
+        ) {
+          try {
+            const response = await fetch("/delete-account", { method: "POST" });
+
+            const result = await response.json();
+            alert(result.msg);
+
+            if (response.ok) {
+              window.location.href = "/login.html"; // Redirect to login after account deletion
+            }
+          } catch (err) {
+            console.error("Error deleting account:", err);
+            alert("Failed to delete account.");
+          }
+        }
+      }
+
+      // Call the function when the page loads
+      window.onload = populateProfile;
+    </script>
+  </body>
 </html>

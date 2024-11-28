@@ -42,36 +42,48 @@ Source: https://themewagon.com/themes/free-bootstrap-4-html5-cooking-website-tem
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-3">
       <div class="typography">
-        <a class="navbar-brand" style="font-size: x-large;" href="#">FindMyRecipe</a>
+        <a class="navbar-brand" style="font-size: x-large" href="#"
+          >FindMyRecipe</a
+        >
       </div>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto" style="font-size: large;">
+        <ul class="navbar-nav ml-auto" style="font-size: large">
           <!-- Find Recipes Link -->
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Find Recipes <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.html"
+              >Find Recipes <span class="sr-only">(current)</span></a
+            >
           </li>
-          
+
           <!-- My Recipes Link (only visible if logged in) -->
-          <li class="nav-item" id="my-recipes-link" style="display: none;">
+          <li class="nav-item" id="my-recipes-link" style="display: none">
             <a class="nav-link" href="myrecipes.html">My Recipes</a>
           </li>
-          
+
           <!-- Login/Sign Up Link (only visible if NOT logged in) -->
           <li class="nav-item" id="login-link">
             <a class="nav-link" href="login.html">Login/Sign Up</a>
           </li>
-    
+
           <!-- Edit Profile Link (only visible if logged in) -->
-          <li class="nav-item" id="profile-link" style="display: none;">
+          <li class="nav-item" id="profile-link" style="display: none">
             <a class="nav-link" href="profile.html">Edit Profile</a>
           </li>
-    
+
           <!-- Logout Link (only visible if logged in) -->
-          <li class="nav-item" id="logout-link" style="display: none;">
+          <li class="nav-item" id="logout-link" style="display: none">
             <a class="nav-link" href="#" id="logout-link">Logout</a>
           </li>
         </ul>
@@ -90,7 +102,9 @@ Source: https://themewagon.com/themes/free-bootstrap-4-html5-cooking-website-tem
                 </div>
                 <!-- Search Bar Section -->
                 <div class="button-group-area mt-40">
-                    <a href="#mainpage" class="genric-btn primary e-large">Let's go</a>
+                  <a href="#mainpage" class="genric-btn primary e-large"
+                    >Let's go</a
+                  >
                 </div>
               </div>
             </div>
@@ -105,31 +119,31 @@ Source: https://themewagon.com/themes/free-bootstrap-4-html5-cooking-website-tem
       <div class="container p-5 mb-30" id="mainpage">
         <!-- Search Bar Section -->
         <div class="input-group rounded p-5">
-            <input
-              type="search"
-              class="form-control rounded"
-              placeholder="Search"
-              aria-label="Search"
-              aria-describedby="search-addon"
-            />
-            <span class="input-group-text border-0" id="search-addon">
-              <div class="search_icon">
-                <a href="#">
-                  <i class="ti-search"></i>
-                </a>
-              </div>
-            </span>
+          <input
+            type="search"
+            class="form-control rounded"
+            placeholder="Search by recipe name"
+            id="search-bar"
+          />
+          <!-- Filter Dropdown -->
+          <div class="default-select" id="default-select">
+            <select id="category-filter">
+              <option value="">Search by Filter</option>
+              <option value="Vegetarian">Vegetarian</option>
+              <option value="Salad">Salad</option>
+              <option value="Soup">Soup</option>
+              <option value="Breakfast">Breakfast</option>
+              <option value="Dessert">Dessert</option>
+              <option value="Italian">Italian</option>
+              <option value="Mexican">Mexican</option>
+              <option value="Indian">Indian</option>
+              <option value="Japanese">Japanese</option>
+              <option value="Chinese">Chinese</option>
+              <option value="Thai">Thai</option>
+            </select>
           </div>
-
-        <div class="default-select" id="default-select">
-            <select>
-                <option value=" 1">No Filter</option>
-                <option value="1">Spanish</option>
-                <option value="1">Arabic</option>
-                <option value="1">Portuguise</option>
-                <option value="1">Bengali</option>
-                </select>
         </div>
+
         <div class="row">
           <div class="col-xl-12">
             <div class="trand_info text-center p-4">
@@ -139,548 +153,8 @@ Source: https://themewagon.com/themes/free-bootstrap-4-html5-cooking-website-tem
         </div>
       </div>
       <div class="container">
-        <div class="row">
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_1.png" alt="" />
-              </div>
-              <h3>Egg Manchurian</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_2.png" alt="" />
-              </div>
-              <h3>Pure Vegetable Bowl</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_3.png" alt="" />
-              </div>
-              <h3>Egg Masala Ramen</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_1.png" alt="" />
-              </div>
-              <h3>Egg Manchurian</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_2.png" alt="" />
-              </div>
-              <h3>Pure Vegetable Bowl</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-              
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_3.png" alt="" />
-              </div>
-              <h3>Egg Masala Ramen</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_1.png" alt="" />
-              </div>
-              <h3>Egg Manchurian</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_2.png" alt="" />
-              </div>
-              <h3>Pure Vegetable Bowl</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_3.png" alt="" />
-              </div>
-              <h3>Egg Masala Ramen</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_1.png" alt="" />
-              </div>
-              <h3>Egg Manchurian</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_2.png" alt="" />
-              </div>
-              <h3>Pure Vegetable Bowl</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_3.png" alt="" />
-              </div>
-              <h3>Egg Masala Ramen</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_1.png" alt="" />
-              </div>
-              <h3>Egg Manchurian</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_2.png" alt="" />
-              </div>
-              <h3>Pure Vegetable Bowl</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_3.png" alt="" />
-              </div>
-              <h3>Egg Masala Ramen</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_1.png" alt="" />
-              </div>
-              <h3>Egg Manchurian</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_2.png" alt="" />
-              </div>
-              <h3>Pure Vegetable Bowl</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_3.png" alt="" />
-              </div>
-              <h3>Egg Masala Ramen</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_1.png" alt="" />
-              </div>
-              <h3>Egg Manchurian</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_2.png" alt="" />
-              </div>
-              <h3>Pure Vegetable Bowl</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_3.png" alt="" />
-              </div>
-              <h3>Egg Masala Ramen</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_1.png" alt="" />
-              </div>
-              <h3>Egg Manchurian</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_2.png" alt="" />
-              </div>
-              <h3>Pure Vegetable Bowl</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_3.png" alt="" />
-              </div>
-              <h3>Egg Masala Ramen</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_1.png" alt="" />
-              </div>
-              <h3>Egg Manchurian</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_2.png" alt="" />
-              </div>
-              <h3>Pure Vegetable Bowl</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_3.png" alt="" />
-              </div>
-              <h3>Egg Masala Ramen</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_1.png" alt="" />
-              </div>
-              <h3>Egg Manchurian</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_2.png" alt="" />
-              </div>
-              <h3>Pure Vegetable Bowl</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_3.png" alt="" />
-              </div>
-              <h3>Egg Masala Ramen</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_1.png" alt="" />
-              </div>
-              <h3>Egg Manchurian</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_2.png" alt="" />
-              </div>
-              <h3>Pure Vegetable Bowl</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_3.png" alt="" />
-              </div>
-              <h3>Egg Masala Ramen</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_1.png" alt="" />
-              </div>
-              <h3>Egg Manchurian</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_2.png" alt="" />
-              </div>
-              <h3>Pure Vegetable Bowl</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_3.png" alt="" />
-              </div>
-              <h3>Egg Masala Ramen</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_1.png" alt="" />
-              </div>
-              <h3>Egg Manchurian</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_2.png" alt="" />
-              </div>
-              <h3>Pure Vegetable Bowl</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_3.png" alt="" />
-              </div>
-              <h3>Egg Masala Ramen</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_1.png" alt="" />
-              </div>
-              <h3>Egg Manchurian</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_2.png" alt="" />
-              </div>
-              <h3>Pure Vegetable Bowl</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_3.png" alt="" />
-              </div>
-              <h3>Egg Masala Ramen</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_1.png" alt="" />
-              </div>
-              <h3>Egg Manchurian</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_2.png" alt="" />
-              </div>
-              <h3>Pure Vegetable Bowl</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6">
-            <div class="single_recepie text-center">
-              <div class="recepie_thumb">
-                <img src="img/recepie/recpie_3.png" alt="" />
-              </div>
-              <h3>Egg Masala Ramen</h3>
-              <span>Appetizer</span>
-              <p>Time Needs: 30 Mins</p>
-              <a href="recipes_details.html" class="line_btn">View Full Recipe</a>
-              <a href="#" class="line_btn">Save Recipe</a>
-            </div>
-          </div>
+        <div class="row" id="recipe-container">
+          <!-- Recipes will be dynamically inserted by JavaScript -->
         </div>
       </div>
     </div>
@@ -870,7 +344,119 @@ Source: https://themewagon.com/themes/free-bootstrap-4-html5-cooking-website-tem
     <script src="js/jquery.form.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/mail-script.js"></script>
-
     <script src="js/main.js"></script>
+    <script>
+      let isLoggedIn = false; // Variable to store the user's login status
+
+      document.addEventListener("DOMContentLoaded", function () {
+        checkLoginStatus(); // Check if the user is logged in
+        fetchRecipes(); // Fetch and display recipes
+
+        const searchBar = document.getElementById("search-bar");
+        const categoryFilter = document.getElementById("category-filter");
+
+        // Fetch recipes on page load
+        fetchRecipes();
+
+        // Add event listener to search bar
+        searchBar.addEventListener("input", () => {
+          const searchValue = searchBar.value;
+          const selectedCategory = categoryFilter.value;
+          fetchRecipes(selectedCategory, searchValue);
+        });
+
+        // Add event listener to dropdown filter
+        categoryFilter.addEventListener("change", () => {
+          const searchValue = searchBar.value;
+          const selectedCategory = categoryFilter.value;
+          fetchRecipes(selectedCategory, searchValue);
+        });
+      });
+
+      // Function to check login status
+      function checkLoginStatus() {
+        fetch("/check-session")
+          .then((response) => response.json())
+          .then((data) => {
+            isLoggedIn = data.loggedIn; // Update the isLoggedIn variable
+          })
+          .catch((err) => {
+            console.error("Error checking login status:", err);
+          });
+      }
+
+      // Function to fetch and display recipes
+      function fetchRecipes(category = "", search = "") {
+        fetch(`/recipes?category=${category}&search=${search}`)
+          .then((response) => response.json())
+          .then((recipes) => {
+            const container = document.getElementById("recipe-container");
+            container.innerHTML = "";
+
+            if (recipes.length === 0) {
+              container.innerHTML = "<p>No recipes available.</p>";
+            } else {
+              recipes.forEach((recipe) => {
+                const recipeElement = document.createElement("div");
+                recipeElement.classList.add("col-xl-4", "col-lg-4", "col-md-6");
+
+                // Conditionally include the "Save Recipe" button if the user is logged in
+                const saveButtonHTML = isLoggedIn
+                  ? `<a href="#" class="line_btn" onclick="saveRecipe('${recipe._id}')">Save Recipe</a>`
+                  : "";
+
+                recipeElement.innerHTML = `
+                        <div class="single_recepie text-center">
+                            <div class="recepie_thumb">
+                                <img src="${
+                                  recipe.image ||
+                                  "img/recepie/recpie_default.png"
+                                }" alt="${recipe.title}" />
+                            </div>
+                            <h3>${recipe.title}</h3>
+                            <span>${recipe.category || "No category"}</span>
+                            <p>Time Needed: ${recipe.time || "N/A"}</p>
+                            <a href="/recipes_details.html?id=${
+                              recipe._id
+                            }" class="line_btn">View Full Recipe</a>
+                            ${saveButtonHTML} <!-- Add save button conditionally -->
+                        </div>
+                    `;
+
+                container.appendChild(recipeElement);
+              });
+            }
+          })
+          .catch((err) => {
+            console.error("Error fetching recipes:", err);
+          });
+      }
+
+      // Function to save recipe
+      function saveRecipe(recipeId) {
+        if (!isLoggedIn) {
+          alert("Please log in to save recipes!");
+          return;
+        }
+
+        fetch("/save-recipe", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ recipeId }), // Send recipeId in the request body
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              alert("Recipe saved successfully!");
+            } else {
+              alert(data.msg || "Failed to save recipe.");
+            }
+          })
+          .catch((err) => {
+            console.error("Error saving recipe:", err);
+            alert("An error occurred while saving the recipe.");
+          });
+      }
+    </script>
   </body>
 </html>

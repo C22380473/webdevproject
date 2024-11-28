@@ -1,319 +1,381 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="zxx">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Tasty Recipes</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/gijgo.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slicknav.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/nice-select.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/gijgo.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/slicknav.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-</head>
+  </head>
 
-<body>
+  <body>
     <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-3">
-          <div class="typography">
-            <a class="navbar-brand" style="font-size: x-large;" href="#">FindMyRecipe</a>
-          </div>
-    
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto" style="font-size: large;">
-              <!-- Find Recipes Link -->
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Find Recipes</a>
-              </li>
-              
-              <!-- My Recipes Link (only visible if logged in) -->
-              <li class="nav-item" id="my-recipes-link" style="display: none;">
-                <a class="nav-link" href="myrecipes.html">My Recipes</a>
-              </li>
-              
-              <!-- Login/Sign Up Link (only visible if NOT logged in) -->
-              <li class="nav-item active" id="login-link">
-                <a class="nav-link" href="login.html">Login/Sign Up<span class="sr-only">(current)</span></a>
-              </li>
-        
-              <!-- Edit Profile Link (only visible if logged in) -->
-              <li class="nav-item" id="profile-link" style="display: none;">
-                <a class="nav-link" href="profile.html">Edit Profile</a>
-              </li>
-        
-              <!-- Logout Link (only visible if logged in) -->
-              <li class="nav-item" id="logout-link" style="display: none;">
-                <a class="nav-link" href="#" id="logout-link">Logout</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-3">
+      <div class="typography">
+        <a class="navbar-brand" style="font-size: x-large" href="#"
+          >FindMyRecipe</a
+        >
+      </div>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto" style="font-size: large">
+          <!-- Find Recipes Link -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Find Recipes</a>
+          </li>
+
+          <!-- My Recipes Link (only visible if logged in) -->
+          <li class="nav-item" id="my-recipes-link" style="display: none">
+            <a class="nav-link" href="myrecipes.html">My Recipes</a>
+          </li>
+
+          <!-- Login/Sign Up Link (only visible if NOT logged in) -->
+          <li class="nav-item active" id="login-link">
+            <a class="nav-link" href="login.html"
+              >Login/Sign Up<span class="sr-only">(current)</span></a
+            >
+          </li>
+
+          <!-- Edit Profile Link (only visible if logged in) -->
+          <li class="nav-item" id="profile-link" style="display: none">
+            <a class="nav-link" href="profile.html">Edit Profile</a>
+          </li>
+
+          <!-- Logout Link (only visible if logged in) -->
+          <li class="nav-item" id="logout-link" style="display: none">
+            <a class="nav-link" href="#" id="logout-link">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <!-- bradcam_area  -->
     <div class="bradcam_area bradcam_bg_1">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="bradcam_text text-center">
-                        <h3>Log In/Sign Up</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /bradcam_area  -->
-<!-- ================ Login/Signup Section Start ================= -->
-<section class="contact-section section_padding">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-12">
-        <div class="text-center mb-4">
-          <h2 class="contact-title">Log In</h2>
-        </div>
-        <!-- Login Form -->
-        <form class="form-contact contact_form" id="loginForm" method="post">
-          <div class="row">
-            <div class="col-12">
-              <div class="form-group">
-                <input class="form-control" name="username" id="login-username" type="text" placeholder="Enter Username" required>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="form-group">
-                <input class="form-control" name="password" id="login-password" type="password" placeholder="Enter Password" required>
-              </div>
-            </div>
-          </div>
-          <div class="form-group mt-3 text-center">
-            <button type="submit" class="button button-contactForm btn_4 boxed-btn">Log In</button>
-          </div>
-        </form>
-      </div>
-
-      <div class="col-lg-6 col-12">
-        <div class="text-center mb-4">
-          <h2 class="contact-title">Sign Up</h2>
-        </div>
-        <!-- Signup Form -->
-        <form class="form-contact contact_form" id="signupForm" method="post">
-          <div class="row">
-            <div class="col-12">
-              <div class="form-group">
-                <input class="form-control" name="username" id="signup-username" type="text" placeholder="Enter Username" required>
-              </div>
-            </div>
-            
-            <div class="col-12">
-              <div class="form-group">
-                <input class="form-control" name="password" id="signup-password" type="password" placeholder="Enter Password" required>
-              </div>
-            </div>
-          </div>
-          <div class="form-group mt-3 text-center">
-            <button type="submit" class="button button-contactForm btn_4 boxed-btn">Sign Up</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- ================ Login/Signup Section End ================= -->
-   <!-- footer  -->
-   <footer class="footer">
-    <div class="footer_top">
       <div class="container">
         <div class="row">
-          <div class="col-xl-2 col-md-6 col-lg-2">
-            <div class="footer_widget">
-              <h3 class="footer_title">Explore Recipes</h3>
-              <ul>
-                <li><a href="#">Popular Recipes</a></li>
-                <li><a href="#"> Newest Additions</a></li>
-                <li><a href="#">Trending Dishes</a></li>
-                <li><a href="#">Seasonal Favorites</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-2 col-md-6 col-lg-2">
-            <div class="footer_widget">
-              <h3 class="footer_title">Categories</h3>
-              <ul>
-                <li><a href="#">Breakfast Recipes</a></li>
-                <li><a href="#">Quick & Easy</a></li>
-                <li><a href="#">Healthy Choices</a></li>
-                <li><a href="#">Desserts</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-2 col-md-6 col-lg-2">
-            <div class="footer_widget">
-              <h3 class="footer_title">Quick Links</h3>
-              <ul>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-2 col-md-6 col-lg-2">
-            <div class="footer_widget">
-              <h3 class="footer_title">Support</h3>
-              <ul>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Account Settings</a></li>
-                <li><a href="#">Report an Issue</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-4 col-md-6 col-lg-4">
-            <div class="footer_widget">
-              <h3 class="footer_title">Subscribe</h3>
-              <p class="newsletter_text">
-                Subscribe to our newsletter for weekly recipes.
-              </p>
-              <form action="#" class="newsletter_form">
-                <input type="text" placeholder="Enter your mail" />
-                <button type="submit"><i class="ti-arrow-right"></i></button>
-              </form>
+          <div class="col-xl-12">
+            <div class="bradcam_text text-center">
+              <h3>Log In/Sign Up</h3>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="copy-right_text">
+    <!-- /bradcam_area  -->
+    <!-- ================ Login/Signup Section Start ================= -->
+    <section class="contact-section section_padding">
       <div class="container">
-        <div class="footer_border"></div>
-        <div class="row align-items-center">
-          <div class="col-xl-8 col-md-8">
-            <p class="copy_right">
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              All rights reserved | This template is made with
-              <i class="fa fa-heart-o" aria-hidden="true"></i> by
-              <a href="https://colorlib.com" target="_blank">Colorlib</a>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <div class="text-center mb-4">
+              <h2 class="contact-title">Log In</h2>
+            </div>
+            <!-- Login Form -->
+            <form
+              class="form-contact contact_form"
+              id="loginForm"
+              method="post"
+            >
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <input
+                      class="form-control"
+                      name="username"
+                      id="login-username"
+                      type="text"
+                      placeholder="Enter Username"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <input
+                      class="form-control"
+                      name="password"
+                      id="login-password"
+                      type="password"
+                      placeholder="Enter Password"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group mt-3 text-center">
+                <button
+                  type="submit"
+                  class="button button-contactForm btn_4 boxed-btn"
+                >
+                  Log In
+                </button>
+              </div>
+            </form>
           </div>
-          <div class="col-xl-4 col-md-4">
-            <div class="socail_links">
-              <ul>
-                <li>
-                  <a href="#">
-                    <i class="ti-facebook"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="ti-twitter-alt"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-dribbble"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-behance"></i>
-                  </a>
-                </li>
-              </ul>
+
+          <div class="col-lg-6 col-12">
+            <div class="text-center mb-4">
+              <h2 class="contact-title">Sign Up</h2>
+            </div>
+            <!-- Signup Form -->
+            <form
+              class="form-contact contact_form"
+              id="signupForm"
+              method="post"
+            >
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <input
+                      class="form-control"
+                      name="username"
+                      id="signup-username"
+                      type="text"
+                      placeholder="Enter Username"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-group">
+                    <input
+                      class="form-control"
+                      name="password"
+                      id="signup-password"
+                      type="password"
+                      placeholder="Enter Password"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group mt-3 text-center">
+                <button
+                  type="submit"
+                  class="button button-contactForm btn_4 boxed-btn"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================ Login/Signup Section End ================= -->
+    <!-- footer  -->
+    <footer class="footer">
+      <div class="footer_top">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-2 col-md-6 col-lg-2">
+              <div class="footer_widget">
+                <h3 class="footer_title">Explore Recipes</h3>
+                <ul>
+                  <li><a href="#">Popular Recipes</a></li>
+                  <li><a href="#"> Newest Additions</a></li>
+                  <li><a href="#">Trending Dishes</a></li>
+                  <li><a href="#">Seasonal Favorites</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-2 col-md-6 col-lg-2">
+              <div class="footer_widget">
+                <h3 class="footer_title">Categories</h3>
+                <ul>
+                  <li><a href="#">Breakfast Recipes</a></li>
+                  <li><a href="#">Quick & Easy</a></li>
+                  <li><a href="#">Healthy Choices</a></li>
+                  <li><a href="#">Desserts</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-2 col-md-6 col-lg-2">
+              <div class="footer_widget">
+                <h3 class="footer_title">Quick Links</h3>
+                <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-2 col-md-6 col-lg-2">
+              <div class="footer_widget">
+                <h3 class="footer_title">Support</h3>
+                <ul>
+                  <li><a href="#">Help Center</a></li>
+                  <li><a href="#">Account Settings</a></li>
+                  <li><a href="#">Report an Issue</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6 col-lg-4">
+              <div class="footer_widget">
+                <h3 class="footer_title">Subscribe</h3>
+                <p class="newsletter_text">
+                  Subscribe to our newsletter for weekly recipes.
+                </p>
+                <form action="#" class="newsletter_form">
+                  <input type="text" placeholder="Enter your mail" />
+                  <button type="submit"><i class="ti-arrow-right"></i></button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-  <!--/ footer  -->
+      <div class="copy-right_text">
+        <div class="container">
+          <div class="footer_border"></div>
+          <div class="row align-items-center">
+            <div class="col-xl-8 col-md-8">
+              <p class="copy_right">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                All rights reserved | This template is made with
+                <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </p>
+            </div>
+            <div class="col-xl-4 col-md-4">
+              <div class="socail_links">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="ti-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="ti-twitter-alt"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-dribbble"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-behance"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--/ footer  -->
 
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
 
-  <!-- JS here -->
-  <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-  <script src="js/vendor/jquery-1.12.4.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
-  <script src="js/ajax-form.js"></script>
-  <script src="js/waypoints.min.js"></script>
-  <script src="js/jquery.counterup.min.js"></script>
-  <script src="js/imagesloaded.pkgd.min.js"></script>
-  <script src="js/scrollIt.js"></script>
-  <script src="js/jquery.scrollUp.min.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script src="js/nice-select.min.js"></script>
-  <script src="js/jquery.slicknav.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/gijgo.min.js"></script>
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
 
-  <!--contact js-->
-  <script src="js/contact.js"></script>
-  <script src="js/jquery.ajaxchimp.min.js"></script>
-  <script src="js/jquery.form.js"></script>
-  <script src="js/jquery.validate.min.js"></script>
-  <script src="js/mail-script.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      // Submit login
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const username = document.getElementById("login-username").value;
+          const password = document.getElementById("login-password").value;
 
-  <script src="js/main.js"></script>
-  <script>
+          const response = await fetch("/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, password }),
+          });
 
-   // Submit login
-   document.getElementById('loginForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const username = document.getElementById('login-username').value;
-    const password = document.getElementById('login-password').value;
+          const result = await response.json();
+          alert(result.msg);
+          window.location.href = "/index.html"; // You can change this to the appropriate page
+        });
 
-    const response = await fetch('/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password }),
-    });
+      // Submit signup
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const username = document.getElementById("signup-username").value;
+          const password = document.getElementById("signup-password").value;
 
-    const result = await response.json();
-    alert(result.msg);
-    window.location.href = '/index.html';  // You can change this to the appropriate page
-  });
+          const response = await fetch("/signup", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, password }),
+          });
 
-  // Submit signup
-  document.getElementById('signupForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const username = document.getElementById('signup-username').value;
-    const password = document.getElementById('signup-password').value;
-
-    const response = await fetch('/signup', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password }),
-    });
-
-    const result = await response.json();
-    alert(result.msg);
-  });
-  </script>
-</body>
-
+          const result = await response.json();
+          alert(result.msg);
+        });
+    </script>
+  </body>
 </html>
