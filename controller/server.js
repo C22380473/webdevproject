@@ -223,3 +223,104 @@ app.post("/delete-account", isAuthenticated, async (req, res) => {
       .json({ msg: "An error occurred while deleting the account." });
   }
 });
+
+// Route to save a recipe to "My Saved Recipes"
+app.post("/save-recipe", isAuthenticated, async (req, res) => {
+  const { recipeId } = req.body;
+
+  // Validate input
+  if (!recipeId) {
+    return res.status(400).json({ msg: "Recipe ID is required." });
+  }
+
+  try {
+    // Check if the recipe exists in the database
+    const recipe = await Recipe.findById(recipeId);
+    if (!recipe) {
+      return res.status(404).json({ msg: "Recipe not found." });
+    }
+
+    // Find the logged-in user and update their savedRecipes
+    const user = await User.findById(req.session.userId);
+    if (!user) {
+      return res.status(404).json({ msg: "User not found." });
+    }
+
+    // Avoid duplicates
+    if (user.savedRecipes.includes(recipeId)) {
+      return res.status(400).json({ msg: "Recipe is already saved." });
+    }
+
+    // Add the recipe to the user's savedRecipes
+    user.savedRecipes.push(recipeId);
+    await user.save();
+
+    res.status(200).json({ msg: "Recipe saved successfully!" });
+  } catch (err) {
+    console.error("Error saving recipe:", err);
+    res.status(500).json({ msg: "An error occurred while saving the recipe." });
+  }
+});
+
+// Route to get recipe details
+app.get("/recipe-details/:id", async (req, res) => {
+  const recipeId = req.params.id;
+  try {
+    const recipe = await Recipe.findById(recipeId);
+    res.json(recipe);
+  } catch (error) {
+    res.status(500).send("Error fetching recipe details");
+  }
+});
+
+// Route to get all saved recipes for the logged-in user
+app.get("/my-saved-recipes", isAuthenticated, async (req, res) => {
+  try {
+    // Find the user and populate their savedRecipes
+    const user = await User.findById(req.session.userId).populate(
+      "savedRecipes",
+      "title image time category"
+    );
+    if (!user) {
+      return res.status(404).json({ msg: "User not found." });
+    }
+
+    res.status(200).json({ savedRecipes: user.savedRecipes });
+  } catch (err) {
+    console.error("Error fetching saved recipes:", err);
+    res
+      .status(500)
+      .json({ msg: "An error occurred while fetching saved recipes." });
+  }
+});
+
+// Route to remove a saved recipe
+app.post("/remove-saved-recipe", isAuthenticated, async (req, res) => {
+  const { recipeId } = req.body;
+
+  // Validate input
+  if (!recipeId) {
+    return res.status(400).json({ msg: "Recipe ID is required." });
+  }
+
+  try {
+    // Find the user and update their savedRecipes
+    const user = await User.findById(req.session.userId);
+    if (!user) {
+      return res.status(404).json({ msg: "User not found." });
+    }
+
+    // Remove the recipe from the savedRecipes array
+    user.savedRecipes = user.savedRecipes.filter(
+      (id) => id.toString() !== recipeId
+    );
+    await user.save();
+
+    res.status(200).json({ msg: "Recipe removed successfully!" });
+  } catch (err) {
+    console.error("Error removing saved recipe:", err);
+    res
+      .status(500)
+      .json({ msg: "An error occurred while removing the recipe." });
+  }
+})
