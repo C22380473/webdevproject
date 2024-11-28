@@ -384,5 +384,88 @@
     <script src="js/mail-script.js"></script>
 
     <script src="js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const recipeId = new URLSearchParams(window.location.search).get("id");
+        if (recipeId) {
+          fetchRecipeDetails(recipeId);
+        } else {
+          document.querySelector(".recepie_details_area").innerHTML =
+            "<p>Recipe not found!</p>";
+        }
+      });
+ 
+      function fetchRecipeDetails(id) {
+        fetch(`/recipe-details/${id}`)
+          .then((response) => response.json())
+          .then((recipe) => {
+            if (!recipe) {
+              document.querySelector(".recepie_details_area").innerHTML =
+                "<p>Recipe not found!</p>";
+              return;
+            }
+            renderRecipeDetails(recipe);
+          })
+          .catch((err) => {
+            console.error("Error fetching recipe details:", err);
+          });
+      }
+ 
+      function renderRecipeDetails(recipe) {
+        // Update the page title
+        document.title = recipe.title;
+ 
+        // Update the hero section
+        document.querySelector(".bradcam_text h3").innerText = recipe.title;
+ 
+        // Update the recipe details section
+        const detailsArea = document.querySelector(".recepie_details_area");
+        detailsArea.innerHTML = `
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-md-6">
+                    <div class="recepies_thumb">
+                        <img src="${
+                          recipe.image || "img/recepie/recepie_details.png"
+                        }" alt="${recipe.title}" />
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6">
+                    <div class="recepies_info">
+                        <h3>${recipe.title}</h3>
+                        <p>${recipe.description}</p>
+                        <div class="resepies_details">
+                            <ul>
+                                <li><p><strong>Time</strong>: ${
+                                  recipe.time || "N/A"
+                                }</p></li>
+                                <li><p><strong>Category</strong>: ${
+                                  recipe.category || "Uncategorized"
+                                }</p></li>
+                                <li><p><strong>Ingredients</strong>: ${recipe.ingredients.join(
+                                  ", "
+                                )}</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-5">
+                <div class="col-xl-12">
+                    <div class="recepies_text">
+                        <h4>Instructions</h4>
+                        <ol class="ordered-list">
+                            ${recipe.instructions
+                              .map((step) => `<li><span>${step}</span></li>`)
+                              .join("")}
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+      }
+    </script>
+ 
   </body>
 </html>
