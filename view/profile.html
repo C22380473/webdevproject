@@ -309,6 +309,18 @@
 
     <script src="js/main.js"></script>
     <script>
+      // Redirect to login if not authenticated
+      fetch("/check-session")
+        .then((response) => response.json())
+        .then((data) => {
+          if (!data.loggedIn) {
+            window.location.href = "/login.html"; // Redirect to login page
+          }
+        })
+        .catch((error) => {
+          console.error("Error checking session:", error);
+        });
+
       // Fetch user data and populate the username field
       async function populateProfile() {
         try {
@@ -317,7 +329,7 @@
             const user = await response.json();
             document.getElementById("name").value = user.username; // Set the username in the field
           } else {
-            alert("Failed to fetch user profile.");
+            alert("Failed to fetch user profile. Please Log In.");
           }
         } catch (err) {
           console.error("Error fetching profile:", err);

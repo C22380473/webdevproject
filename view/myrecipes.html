@@ -289,6 +289,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
    <script src="js/main.js"></script>
    <script>
+    // Redirect to login if not authenticated
+    fetch("/check-session")
+    .then((response) => response.json())
+    .then((data) => {
+        if (!data.loggedIn) {
+        alert("You need to log in to access this page."); 
+        window.location.href = "/login.html"; // Redirect to login page
+        }
+    })
+    .catch((error) => {
+        console.error("Error checking session:", error);
+    });
+
     document.addEventListener('DOMContentLoaded', () => {
        let allRecipes = []; // Array to store all the recipes fetched
 

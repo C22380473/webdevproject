@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true }, // Store hashed passwords
+  savedRecipes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Recipe' }] // Reference to recipes
 });
 
 // Before saving the user, hash the password
@@ -21,8 +22,3 @@ userSchema.pre('save', function(next) {
   
   module.exports = User; 
   
-  const userSchema = new mongoose.Schema({
-    username: { type: String, required: true, unique: true },
-    password: { type: String, required: true }, // Store hashed passwords
-    savedRecipes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Recipe' }] // Reference to recipes
-  });

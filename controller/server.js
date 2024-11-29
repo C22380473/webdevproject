@@ -124,6 +124,16 @@ function isAuthenticated(req, res, next) {
   next(); // Proceed to the next middleware or route handler
 }
 
+// Serve profile.html only if authenticated
+app.get("/profile.html", isAuthenticated, (req, res) => {
+  res.sendFile(path.join(__dirname, "../view/profile.html"));
+});
+
+// Serve myrecipes.html only if authenticated
+app.get("/myrecipes.html", isAuthenticated, (req, res) => {
+  res.sendFile(path.join(__dirname, "../view/myrecipes.html"));
+});
+
 app.post("/recipes", isAuthenticated, (req, res) => {
   // Handle adding a recipe, but only if the user is authenticated
 });
